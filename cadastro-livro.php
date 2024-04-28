@@ -22,13 +22,13 @@ if(isset($_POST['cadastrar'])){
     // verificando se o cadastro foi efetuado
     if($result){
         // sim, emite a mensagem de sucesso
-        echo "<script>alert('Dados cadastrados com sucesso!'); </script>";
+        echo "<script>alert('Dados cadastrados com sucesso!');  </script>";
     }else {
         // não, emite a mensagem de erro
         echo " <script>alert ('Erro ao cadastrar os dados. " . mysqli_error($conn) . " '); </script>";
     }
 
-    header('Location: index.php');
+    // header('Location: index.php');
 
 }
 
@@ -45,6 +45,46 @@ if(isset($_POST['cadastrar'])){
     <title>CADASTRO DE LIVRO</title>
 </head>
 <body>
+
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.php">Biblioteca</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Contato</a>
+            </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Mais
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="cadastro-cliente.php">Cadastrar cliente</a></li>
+                <li><a class="dropdown-item" href="consultar-emprestimo.php">Consultar empréstimos</a></li>
+                <!-- <li><a class="dropdown-item" href="#">Consultar clientes</a></li>
+                 <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#"></a></li> -->
+            </ul>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true"></a>
+            </li>
+        </ul>
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        </div>
+    </div>
+    </nav>
+
 <form action="?cadastro-cliente" method="POST">
     <input type="hidden" name="acao" value="cadastrar">
     <div class="mb-3">
@@ -69,5 +109,8 @@ if(isset($_POST['cadastrar'])){
         </button>
     </div>
 </form>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 </body>
 </html>
