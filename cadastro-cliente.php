@@ -85,38 +85,40 @@ if(isset($_POST['cadastrar'])){
     </div>
     </nav>
 
-<form action="?cadastro-cliente" method="POST">
-    <input type="hidden" name="acao" value="cadastrar">
-    <div class="mb-3">
-        <label>NOME</label>
-        <input type="text" name="nome" class="form-control">        
+    <div class="container">
+        <form action="?cadastro-cliente" method="POST">
+            <input type="hidden" name="acao" value="cadastrar">
+            <div class="mb-3">
+                <label>NOME</label>
+                <input type="text" name="nome" class="form-control">        
+            </div>
+            <div class="mb-3">
+                <label>CPF</label>
+                <input type="number" name="cpf" class="form-control">        
+            </div>
+            <div class="mb-3">
+                <label>E-MAIL</label>
+                <input type="email" name="email" class="form-control">        
+            </div>
+            <div class="mb-3">
+                <label>ENDEREÇO</label>
+                <input type="text" name="endereco" class="form-control">        
+            </div>
+            <div class="mb-3">
+                <label>TELEFONE</label>
+                <input type="number" name="telefone" class="form-control">        
+            </div>
+            <div class="mb-3">
+                <label>DATA DE NASCIMENTO</label>
+                <input type="date" name="data_nasc" class="form-control">        
+            </div>
+            <div class="mb-3">
+                <button type="submit" name="cadastrar" class="btn btn-primary">
+                    CADASTRAR
+                </button>
+            </div>
+        </form>
     </div>
-    <div class="mb-3">
-        <label>CPF</label>
-        <input type="number" name="cpf" class="form-control">        
-    </div>
-    <div class="mb-3">
-        <label>E-MAIL</label>
-        <input type="email" name="email" class="form-control">        
-    </div>
-    <div class="mb-3">
-        <label>ENDEREÇO</label>
-        <input type="text" name="endereco" class="form-control">        
-    </div>
-    <div class="mb-3">
-        <label>TELEFONE</label>
-        <input type="number" name="telefone" class="form-control">        
-    </div>
-    <div class="mb-3">
-        <label>DATA DE NASCIMENTO</label>
-        <input type="date" name="data_nasc" class="form-control">        
-    </div>
-    <div class="mb-3">
-        <button type="submit" name="cadastrar" class="btn btn-primary">
-            CADASTRAR
-        </button>
-    </div>
-</form>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
